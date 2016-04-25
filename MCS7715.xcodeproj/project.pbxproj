@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		92478B711AA267FB001ACAD6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 92478B701AA267FB001ACAD6 /* main.c */; };
+		92478B791AA2681B001ACAD6 /* mcs7715.c in Sources */ = {isa = PBXBuildFile; fileRef = 92478B771AA2681B001ACAD6 /* mcs7715.c */; };
+		92478B7B1AA272A7001ACAD6 /* libusb-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92478B7A1AA272A7001ACAD6 /* libusb-1.0.0.dylib */; };
+		92C0D8051ABC7745006C191D /* pic87f8xjxx.c in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D8031ABC7745006C191D /* pic87f8xjxx.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,16 @@
 /* Begin PBXFileReference section */
 		92478B6D1AA267FB001ACAD6 /* MCS7715 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MCS7715; sourceTree = BUILT_PRODUCTS_DIR; };
 		92478B701AA267FB001ACAD6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		92478B771AA2681B001ACAD6 /* mcs7715.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mcs7715.c; sourceTree = "<group>"; };
+		92478B781AA2681B001ACAD6 /* mcs7715.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcs7715.h; sourceTree = "<group>"; };
+		92478B7A1AA272A7001ACAD6 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libusb-1.0.0.dylib"; path = "../../../../../../opt/local/lib/libusb-1.0.0.dylib"; sourceTree = "<group>"; };
+		92478B821AA4F5E5001ACAD6 /* serial_scratch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = serial_scratch.txt; sourceTree = "<group>"; };
+		92478B831AA4F665001ACAD6 /* parallel_scratch.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parallel_scratch.txt; sourceTree = "<group>"; };
+		92C0D7F61AB5146D006C191D /* 16C50.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = 16C50.h; path = ../MCS7715_Linux_Driver_v2.0.0_Source/16C50.h; sourceTree = "<group>"; };
+		92C0D7F71AB5146D006C191D /* mos7715.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = mos7715.c; path = ../MCS7715_Linux_Driver_v2.0.0_Source/mos7715.c; sourceTree = "<group>"; };
+		92C0D7F81AB5146D006C191D /* mos7715.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mos7715.h; path = ../MCS7715_Linux_Driver_v2.0.0_Source/mos7715.h; sourceTree = "<group>"; };
+		92C0D8031ABC7745006C191D /* pic87f8xjxx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pic87f8xjxx.c; sourceTree = "<group>"; };
+		92C0D8041ABC7745006C191D /* pic87f8xjxx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pic87f8xjxx.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92478B7B1AA272A7001ACAD6 /* libusb-1.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +55,9 @@
 		92478B641AA267FA001ACAD6 = {
 			isa = PBXGroup;
 			children = (
+				92478B7A1AA272A7001ACAD6 /* libusb-1.0.0.dylib */,
 				92478B6F1AA267FB001ACAD6 /* MCS7715 */,
+				92478B7C1AA2DA98001ACAD6 /* Reference */,
 				92478B6E1AA267FB001ACAD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,8 +74,24 @@
 			isa = PBXGroup;
 			children = (
 				92478B701AA267FB001ACAD6 /* main.c */,
+				92478B771AA2681B001ACAD6 /* mcs7715.c */,
+				92478B781AA2681B001ACAD6 /* mcs7715.h */,
+				92478B821AA4F5E5001ACAD6 /* serial_scratch.txt */,
+				92478B831AA4F665001ACAD6 /* parallel_scratch.txt */,
+				92C0D8031ABC7745006C191D /* pic87f8xjxx.c */,
+				92C0D8041ABC7745006C191D /* pic87f8xjxx.h */,
 			);
 			path = MCS7715;
+			sourceTree = "<group>";
+		};
+		92478B7C1AA2DA98001ACAD6 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				92C0D7F61AB5146D006C191D /* 16C50.h */,
+				92C0D7F71AB5146D006C191D /* mos7715.c */,
+				92C0D7F81AB5146D006C191D /* mos7715.h */,
+			);
+			name = Reference;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C0D8051ABC7745006C191D /* pic87f8xjxx.c in Sources */,
 				92478B711AA267FB001ACAD6 /* main.c in Sources */,
+				92478B791AA2681B001ACAD6 /* mcs7715.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +236,15 @@
 		92478B751AA267FB001ACAD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +252,15 @@
 		92478B761AA267FB001ACAD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +284,7 @@
 				92478B761AA267FB001ACAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

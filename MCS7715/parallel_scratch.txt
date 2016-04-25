@@ -1,0 +1,35 @@
+static struct parport_operations parport_mos7715_ops =
+{
+.owner =                THIS_MODULE,
+.write_data =           parport_mos7715_write_data,
+.read_data =            parport_mos7715_read_data,
+
+.write_control =        parport_mos7715_write_control,
+.read_control =         parport_mos7715_read_control,
+.frob_control =         parport_mos7715_frob_control,
+
+.read_status =          parport_mos7715_read_status,
+
+.enable_irq =           parport_mos7715_enable_irq,
+.disable_irq =          parport_mos7715_disable_irq,
+
+.data_forward =         parport_mos7715_data_forward,
+.data_reverse =         parport_mos7715_data_reverse,
+
+.init_state =           parport_mos7715_init_state,
+.save_state =           parport_mos7715_save_state,
+.restore_state =        parport_mos7715_restore_state,
+
+.epp_write_data =       parport_mos7715_epp_write_data,
+.epp_read_data =        parport_mos7715_epp_read_data,
+.epp_write_addr =       parport_mos7715_epp_write_addr,
+.epp_read_addr =        parport_mos7715_epp_read_addr,
+
+.ecp_write_data =       parport_mos7715_ecp_write_data,
+.ecp_read_data =        parport_mos7715_ecp_read_data,
+.ecp_write_addr =       parport_mos7715_ecp_write_addr,
+
+.compat_write_data =    parport_mos7715_write_compat,
+.nibble_read_data =     parport_ieee1284_read_nibble,
+.byte_read_data =       parport_ieee1284_read_byte,
+};

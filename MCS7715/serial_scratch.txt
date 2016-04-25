@@ -1,0 +1,18 @@
+static struct usb_serial_driver moschip7715_2port_device = {
+.open			= mos7715_open,
+.close			= mos7715_close,
+.throttle		= mos7715_throttle,
+.unthrottle		= mos7715_unthrottle,
+.calc_num_ports	= mos7715_calc_num_ports,
+.attach			= mos7715_startup,
+.shutdown		= mos7715_shutdown,
+.ioctl			= mos7715_ioctl,
+.set_termios	= mos7715_set_termios,
+.write			= mos7715_write,
+.write_room		= mos7715_write_room,
+.chars_in_buffer	= mos7715_chars_in_buffer,
+.break_ctl		= mos7715_break,
+.port_probe		= mos7715_port_probe,
+.port_remove	= mos7715_port_remove,
+.read_bulk_callback	= mos7715_bulk_in_callback
+};
